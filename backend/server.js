@@ -16,7 +16,10 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://caloriecounteapp.vercel.app'
+  ],
   credentials: true
 }));
 
